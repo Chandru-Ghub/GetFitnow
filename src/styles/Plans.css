@@ -1,0 +1,122 @@
+/* clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%); */
+
+.plans{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    
+}
+.silver{
+    background-color: rgb(27, 27, 27);
+    padding: 20px 30px;
+    margin-top: 30px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+    transition: 1s;
+}
+.silver:hover{
+    background-color: white;
+    >.basicplan{
+        color: black;
+    }
+    >ul{
+        color: black;
+    }
+    >.enroll{
+        background-color: rgb(3, 161, 3);
+    }
+}
+
+.silver::after{
+    position: absolute;
+    content: '';
+    top: -68px;
+    left: -1px;
+    width: 102%;
+    height: 100px;
+    background: rgb(0, 0, 0);
+    clip-path: polygon(0 10%, 100% 0%, 100% 70%, 0% 100%);
+
+}
+.silver::before{
+    position: absolute;
+    content: '';
+    bottom: -70px;
+    left: 0;
+    width: 110%;
+    height: 100px;
+    background:rgb(0, 0, 0);
+    clip-path: polygon(0 30%, 100% 0%, 100% 70%, 0% 100%);
+
+}
+.enroll{
+    background-color:rgb(49, 46, 46);
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    color: white;
+    border: none;
+    
+}
+.listPlan{
+text-align: center;
+font-size: 14px;
+color: rgb(169, 166, 166);
+margin-bottom: 30px;
+>li{
+    margin-bottom: 10px;
+}
+}
+.basicplan{
+    text-align: center;
+    font-size: 20px;
+    margin: 40px 0 20px 0;
+    font-weight: 700;
+    color: white;
+}
+.price{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(3, 161, 3);
+    font-weight: 700;
+    >.class{
+        font-size: 14px;
+        color: grey;
+    }
+    margin-bottom: 30px;
+}
+.checkplane{
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-size: 30px;
+    color: greenyellow;
+}
+
+.priceContainer{
+    display: flex;
+    /* background-color: red;
+    padding: 60px; */
+    column-gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.price2{
+    margin-bottom: 10px;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 30px;
+    >span{
+        color: rgb(43, 235, 43);
+    }
+}
+.ttle1{
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: greenyellow;
+}

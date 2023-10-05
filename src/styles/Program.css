@@ -1,0 +1,123 @@
+.Program{
+    background-color: rgba(0, 0, 0, 0.948);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    position: relative;
+}
+.progtitle{
+    color: greenyellow;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+
+.progbody{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+    >span{
+        color: rgb(27, 225, 27);
+    }
+}
+
+.collectionProg{
+    /* background-color: green; */
+    display: flex;
+    row-gap: 10px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 180px;
+
+
+}
+.flex{
+    padding: 30px 20px;
+    color: white;
+    /* background-color: rgba(0, 0, 0, 0.282); */
+    margin-right: 10px;
+    width: 250px;
+    height: 300px;
+    border: 1px solid rgb(22, 23, 22);
+    >.icon{
+   
+        color: rgb(0, 0, 0);
+        background-color: rgb(27, 225, 27);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+       
+    }
+
+
+}
+.flex:hover{
+    background-color: rgb(27, 225, 27);
+    color: black;
+    >.icon{
+        color:  rgb(27, 225, 27);
+        transform: scale(1.1);
+        background-color: black;
+    }
+    >.pgm{
+        color: black;
+    }
+
+    >.programdesc{
+        color: black;
+    }
+}
+
+/* .Program::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(0 0,0 100%,100% 100%);
+   
+} */
+.Program::after{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background:rgb(27, 29, 27);;
+    clip-path: polygon(0 0,0 100%,100% 100%);
+   
+}
+/* .Program::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(28, 224, 51);
+    clip-path: polygon(100% 0,100% 100%,0 0);
+   
+} */
+.programdesc{
+    color: gray;
+    font-size: 13px;
+    margin: 10px 0;
+}
+.pgm{
+    text-transform: uppercase;
+    margin: 20px 0 10px 0;
+    color: white;
+    /* color: rgba(128, 128, 128, 0.664); */
+}

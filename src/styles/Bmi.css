@@ -1,0 +1,166 @@
+.bmi{
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.937); */
+    background-color: rgb(27, 29, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bmiinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(27, 29, 27);
+    padding: 10px;
+
+}
+
+.bmiimg{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    >img{
+        width: 100%;
+    }
+}
+/*  */
+
+.bmiimg::before{
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: -20%;
+    transform: translate(-50%) rotate(20deg);
+    background-color: rgb(27, 29, 27);
+    width: 30%;
+    height: 500px;
+    border-right: 2px solid yellowgreen;
+}
+
+.BMI{
+    color: rgba(128, 128, 128, 0.422);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.bmicalc{
+    /* background-color: red; */
+    /* padding: 30px; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    >.bmidata{
+        max-width: 600px;
+        /* background-color: red; */
+        padding: 20px;
+    }
+}
+.bmititle{
+    /* background-color: green; */
+    text-transform: uppercase;
+    margin: 20px 0;
+    font-size: 30px;
+    color: greenyellow;
+   
+}
+/*  */
+
+
+
+.bmiform{
+    display: flex;
+    flex-direction: column;
+    /* width: 300px; */
+    row-gap: 20px;
+    /* background-color: blue; */
+    
+    .bmibtn{
+        /* background-color: red; */
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        /* column-gap: 20px; */
+
+        >button{
+            width: 100%;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+        >.leftbtn{
+            background-color: transparent;
+            border: 2px solid white;
+            border-right:2px solid white;
+            color: white;
+        }
+        /* >.rightbtn{
+            background-color:rgb(52, 238, 52);
+            border: 2px solid white;
+            color: rgb(0, 0, 0);
+            border-left:none;
+        }
+        >button:hover{
+            background-color: rgb(48, 237, 48);
+            color: black;
+        } */
+   
+    }
+
+}
+.bmiresult{
+    /* background-color: red; */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bmivalue{
+    color: greenyellow;
+}
+
+.chart{
+    /* background-color: blue; */
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+.chart:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.chartArrow{
+    color: rgb(38, 245, 38);
+    font-size: 30px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+
+.inp{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    >input{
+        height: 50px;
+        padding-left: 10px;
+        width: 100%;
+        background-color:transparent;
+        border: 2px solid rgb(255, 255, 255);
+        color: white;
+        outline: none;
+
+    }
+}
+
+.bmiChart{
+    width: auto;
+    padding: 20px;
+    /* background-color: red; */
+    >img{
+        width: 100%;
+    }
+}
