@@ -10,7 +10,7 @@
   background-color: rgb(45, 45, 45);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   padding: 30px 30px;
   color: rgb(209, 205, 205);
   gap: 40px;
@@ -75,7 +75,7 @@
     min-width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     padding: 20px 30px;
 
     > p {

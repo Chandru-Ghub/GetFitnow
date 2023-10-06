@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import '../styles/Plans.css'
-import img1 from '../Images/img7.jpg'
+// import img1 from '../Images/img7.jpg'
 const Plans = () => {
     // const [price,setPrice] = useState();
     // const [plan,setPlan]  = useState();
-    const [qty,setQty] = useState([
+    const [qty] = useState([
 
         {price:40,
             plane : 'Basic plan'
