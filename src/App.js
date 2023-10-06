@@ -7,6 +7,8 @@ import Plans from './components/Plans';
 import Program from './components/Program';
 import WhyUs from './components/WhyUs';
 import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <NewsLetter/>
       <Plans/>
       <Footer/>
+      {/* <Register/>
+      <Login/> */}
     </div>
   );
 }
