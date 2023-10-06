@@ -79,7 +79,7 @@
         height: 50px;
         width: 100%;
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         /* column-gap: 20px; */
 
         >button{
@@ -125,7 +125,7 @@
     color: grey;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     
 }
 .chart:hover{
