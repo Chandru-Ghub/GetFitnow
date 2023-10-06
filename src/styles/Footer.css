@@ -1,194 +1,183 @@
 .footer {
-    background-color: rgb(29, 29, 29);
+  background-color: rgb(29, 29, 29);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-top {
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 30px 30px;
+  color: rgb(209, 205, 205);
+  gap: 40px;
+  width: 100%;
+
+  > .location {
+    font-size: 13px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100vw;
-}
- 
-.footer-top {
-    background-color: rgb(45, 45, 45);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    padding: 30px 30px;
-    color: rgb(209, 205, 205);
-    gap: 40px;
-    /* width: 100%; Remove this line */
- 
-    .location {
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        width: 290px;
- 
-        span {
-            background-color: rgb(27, 225, 27);
-            font-size: 25px;
-            border-radius: 50%;
-            padding: 15px;
-            color: black;
-        }
-    }
- 
-    .call {
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        width: 290px;
- 
-        span {
-            background-color: rgb(27, 225, 27);
-            font-size: 25px;
-            border-radius: 50%;
-            padding: 15px;
-            color: black;
-        }
-    }
- 
-    .mail {
-        font-size: 13px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        width: 290px;
- 
-        span {
-            background-color: rgb(27, 225, 27);
-            font-size: 25px;
-            border-radius: 50%;
-            padding: 15px;
-            color: black;
-        }
-    }
-}
- 
-.footermid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color: white;
-    /* padding: 20px 50px; Uncomment and specify padding values if needed */
- 
-    .mid1 {
-        /* background-color: rgb(60, 90, 60); */
-        width: 30%;
-        min-width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        padding: 20px 30px;
- 
-        p {
-            color: rgb(169, 166, 166);
-            font-size: 13px;
-            margin-top: 20px;
-        }
- 
-        .flogo {
-            /* background-color: red; */
-            text-align: start;
-            color: white;
-            font-size: 28px;
- 
-            h2 {
-                display: flex;
-                align-items: center;
- 
-                span {
-                    font-size: 50px;
-                }
-            }
-        }
-    }
- 
-    .mid2 {
-        padding: 20px 30px;
- 
-        ul {
-            li {
-                color: rgb(169, 166, 166);
-                font-size: 13px;
-                margin-top: 10px;
-            }
-        }
- 
-        h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-    }
- 
-    .mid3 {
-        padding: 20px 30px;
- 
-        ul {
-            li {
-                color: rgb(169, 166, 166);
-                font-size: 13px;
-                margin-top: 10px;
-            }
-        }
- 
-        h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-    }
- 
-    .mid4 {
-        padding: 20px 30px;
-        /* background-color: red; */
-        width: 35%;
-        min-width: 400px;
- 
-        h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
- 
-        .tip1 {
-            p {
-                color: rgb(169, 166, 166);
-                font-size: 15px;
-            }
- 
-            .light {
-                color: rgb(72, 71, 71);
-                font-size: 12px;
-                margin: 5px 0;
-            }
- 
-            hr {
-                border: none;
-                border-top: 0.5px solid rgb(58, 58, 58);
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
- 
-.footer-end {
+    gap: 15px;
     /* background-color: red; */
-    padding: 20px 0;
-    color: rgb(149, 147, 147);
-    text-align: center;
+    width: 290px;
+
+    > span {
+      background-color: rgb(27, 225, 27);
+      font-size: 25px;
+      border-radius: 50%;
+      padding: 15px;
+      color: black;
+    }
+  }
+  > .call {
     font-size: 13px;
-    width: 96%;
-    margin-bottom: 10px;
- 
-    hr {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 290px;
+    > span {
+      background-color: rgb(27, 225, 27);
+      font-size: 25px;
+      border-radius: 50%;
+      padding: 15px;
+      color: black;
+    }
+  }
+  > .mail {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 290px;
+    > span {
+      background-color: rgb(27, 225, 27);
+      font-size: 25px;
+      border-radius: 50%;
+      padding: 15px;
+      color: black;
+    }
+  }
+}
+.footermid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+  /* padding: 20px 50px; */
+  width: 100%;
+
+  > .mid1 {
+    /* background-color: rgb(60, 90, 60); */
+    width: 30%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 30px;
+
+    > p {
+      color: rgb(169, 166, 166);
+      font-size: 13px;
+      margin-top: 20px;
+    }
+    > .flogo {
+      /* background-color: red; */
+      text-align: start;
+      color: white;
+      font-size: 28px;
+
+      > h2 {
+        display: flex;
+        align-items: center;
+        > span {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  > .mid2 {
+    padding: 20px 30px;
+
+    > ul {
+      > li {
+        color: rgb(169, 166, 166);
+        font-size: 13px;
+        margin-top: 10px;
+      }
+    }
+    > h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  > .mid3 {
+    padding: 20px 30px;
+    > ul {
+      > li {
+        color: rgb(169, 166, 166);
+        font-size: 13px;
+        margin-top: 10px;
+      }
+    }
+    > h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+  > .mid4 {
+    padding: 20px 30px;
+    /* background-color: red; */
+    width: 35%;
+    min-width: 400px;
+
+    > h2 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    > .tip1 {
+      > p {
+        color: rgb(169, 166, 166);
+        font-size: 15px;
+      }
+      > .light {
+        color: rgb(72, 71, 71);
+        font-size: 12px;
+        margin: 5px 0;
+      }
+
+      > hr {
         border: none;
         border-top: 0.5px solid rgb(58, 58, 58);
-        margin-bottom: 25px;
+        /* height: 10px;          */
+        margin-bottom: 20px;
+      }
     }
- 
-    .copy {
-        span {
-            color: rgb(27, 225, 27);
-        }
+  }
+}
+
+.footer-end {
+  /* background-color: red; */
+  padding: 20px 0;
+  color: rgb(149, 147, 147);
+  text-align: center;
+  font-size: 13px;
+  width: 96%;
+  margin-bottom: 10px;
+  > hr {
+    border: none;
+    border-top: 0.5px solid rgb(58, 58, 58);
+    /* height: 10px;          */
+    margin-bottom: 25px;
+  }
+
+  > .copy {
+    > span {
+      color: rgb(27, 225, 27);
     }
+  }
 }
