@@ -12,7 +12,7 @@ const Login = () => {
                 SIGN IN
             </div>
             <form action="" className="registerdata">
-                <div className="leftform rfm">
+                <div className="leftform rfm inplogin">
                     <input type="text" className="username" placeholder='username' />
                     <input type="text" className="password" placeholder='password' />
                 </div>
@@ -27,7 +27,15 @@ const Login = () => {
                 <button className='btncrtacc'>
                     LOGIN
                 </button>
+               
             </div>
+            <div className="bakArrrow bckarw">
+        <span class="material-symbols-outlined">
+            chevron_left
+        </span>
+        <p>Back</p>
+                                        
+        </div>
         </div>
     </div>
     </div>
