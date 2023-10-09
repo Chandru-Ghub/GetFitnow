@@ -1,6 +1,6 @@
 .register{
     background-color: lightblue;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,6 +8,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    padding: 192px 0;
 }
 
 .registercon{
