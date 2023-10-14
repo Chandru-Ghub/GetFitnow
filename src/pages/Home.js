@@ -40,13 +40,16 @@ const Home = ({userDetail}) => {
   return (
     <div>
       <Navbar userDetail = {userDetail}/>
+      
     <div className='home'>
         <div className="cover">
+          
           <h1 className="title">
             GET<span className='titlegreen'>Fit</span>
           </h1>
-
+          
           <div className="homecnt">
+          
               <div className="temp">
                 <span className="build">BUILD</span>YOUR BODY
               </div>

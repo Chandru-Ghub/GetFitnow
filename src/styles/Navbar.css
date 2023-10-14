@@ -57,4 +57,34 @@
     align-items: center;
     gap: 5px;
   }
+
+  .timing{
+    /* border: 2px solid white; */
+    width: 200px;
+    /* background-color: red; */
+    display: flex;
+    padding-left: 5px;
+    column-gap: 10px;
+    font-size: 13px;
+    >p{
+        letter-spacing: 2px;
+        color: rgb(255, 255, 255);
+    }
+    >marque{
+        color: white;
+    }
+}
+.timingContainer{
+    background-color: rgb(0, 0, 0);
+    /* display: flex;
+    justify-content: flex-end; */
+    padding-left: 25px;
+}
+.marq{
+    color: white;
+    text-transform: capitalize;
+    >span{
+        color: greenyellow;
+    }
+}
  

@@ -23,7 +23,16 @@ const Navbar = ({userDetail}) => {
                 exercise
                 </span>
             </h2>
+            <div className="timingContainer">
+           <div className='timing' >
+              <p>TIMING</p>
+              <marquee className='marq' behavior="scroll" scrolldelay ='150' direction="side">
+              <span>MORNING </span>  - 5AM tO 10AM__  <span>EVENING </span>  - 5PM to 9PM__ <span>SUNDAY </span>HOLIDAY
+              </marquee>
+            </div>
+           </div>
         </div>
+        
         <ul className="navs">
             <li>
                 <Link style={{color:'inherit'}}>
