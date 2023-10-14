@@ -5,6 +5,7 @@ import axios from 'axios'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
 import   { Link, NavLink, Router, useNavigate } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const Register = () => {
 
@@ -49,6 +50,7 @@ const Register = () => {
         }
     })
   return (
+    <div>
     <div className='register'>
         <div className="registercon">
             {/* <h3>SHOPYddddddddddd</h3> */}
@@ -132,6 +134,9 @@ const Register = () => {
             <p >Back</p>
                                         
         </div>
+   
+    </div>
+    <Footer/>
     </div>
   )
 }

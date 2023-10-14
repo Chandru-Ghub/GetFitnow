@@ -7,6 +7,7 @@ import * as Yup from 'yup'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { userContext } from '../App'
+import Footer from '../components/Footer'
 
 const Login = () => {
     
@@ -108,6 +109,7 @@ const Login = () => {
         </div>
         </div>
     </div>
+        <Footer/>
     </div>
   )
 }
