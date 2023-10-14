@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../styles/Navbar.css'
-const Navbar = () => {
+import {Link } from 'react-router-dom'
+import { userContext } from '../App'
+
+    
+
+const Navbar = ({userDetail}) => {
+
+      // Getting user details from the  
+    //   const userName = useContext(userContext)
+      const userToken = window.localStorage.getItem('token') 
+      const userStatus = window.localStorage.getItem('status') 
+      // const CURRENT_USER = userDetail.data.isAdmin;
+      console.log(userStatus);
+   
   return (
     <div className='navbar'>
         <div className="logo">
@@ -12,11 +25,53 @@ const Navbar = () => {
             </h2>
         </div>
         <ul className="navs">
-            <li>Home</li>
-            <li>About</li>
-            <li>Plans</li>
-            <li>Info</li>
-            <li>contact</li>
+            <li>
+                <Link style={{color:'inherit'}}>
+                  About
+                </Link>
+            </li>
+            <li>
+                <Link style={{color:'inherit'}}>
+                plans
+                </Link>
+            </li>
+           {
+            userStatus == 'true'? <li>
+            <Link to={'admin'} style={{color:'inherit'}}>
+            Dashboard
+            </Link>
+        </li>: null
+           }
+            { !userToken?
+             <>
+            {/* <li>
+                <Link to={'register'}  style={{color:'inherit'}}>
+                SignUP
+                </Link>
+            </li> */}
+            <li>
+                <Link to={'login'}  style={{color:'inherit'}}>
+                signin
+                </Link>
+            </li>
+            </>
+            
+            :null}
+
+            {userToken ?
+            <li>
+                <Link to={`user/`+ userDetail._id}  style={{color:'inherit'}}>
+               
+                              
+                <p className='nameUser'>
+                <span className="material-symbols-outlined profile">
+                  account_circle
+                  </span>
+                <span>{userDetail.name}</span>
+                </p>
+                  
+                </Link>
+            </li> : null}
             
         </ul>
     </div>

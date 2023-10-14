@@ -17,7 +17,7 @@ const Plans = () => {
         },
     ]);
 
-    console.log(qty);
+    // console.log(qty);
   return (
           
             <div className='plans'>

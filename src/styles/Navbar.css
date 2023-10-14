@@ -33,13 +33,16 @@
     font-size: 20px;
     text-transform: uppercase;
     justify-content: flex-end;
+    /* background-color: red; */
     padding: 10px;
     >li{
         margin-left: 30px;
         
     }
-    >li:nth-child(5){
+    >li:last-child{
        margin-right: 30px;
+      
+
     }
     >li:hover{
         color: white;
@@ -47,5 +50,11 @@
 
   }
 
-  
+  .nameUser{
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
  
