@@ -9,16 +9,18 @@ import Program from '../components/Program';
 import WhyUs from '../components/WhyUs';
 import  {userContext } from '../App';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const Home = ({userDetail}) => {
 
-  // const myuser = useContext(userContext)
+  const myuser = useContext(userContext)
+  const formData = myuser.formData
   // const [userDetail,setUserDetail] = useState('')
   // console.log(wind);
   // const token = window.localStorage.getItem('token')
   // const isAdmin = window.localStorage.getItem('status')
-  // console.log(isAdmin);
+
   
   // useEffect(()=>{
 
@@ -36,11 +38,18 @@ const Home = ({userDetail}) => {
 
   // },[])
 
+  
+   
+  const navigate = useNavigate()
+  const navigateTo =()=>{
+    console.log('first')
+    navigate(!userDetail ? '/register' : !formData?'/formdata': `/user/${userDetail._id}`)
+
+  }
 
   return (
-    <div>
+    <div className='mainhome'>
       <Navbar userDetail = {userDetail}/>
-      
     <div className='home'>
         <div className="cover">
           
@@ -61,7 +70,7 @@ const Home = ({userDetail}) => {
                       TRAINER FOR BEST WORKOUT YOURSELF AS YOU WANT!
               </div>
               <div className="join">
-                <button className="btnjoin">
+                <button onClick={navigateTo} className="btnjoin">
                   FREE TRY-OUT TRAINING
                 </button>
               </div>
@@ -70,11 +79,11 @@ const Home = ({userDetail}) => {
       
     </div>
 
-    <Program/>
+    <Program userDetail = {userDetail}/>
     <BmiCalculator/>
-    <WhyUs/>
+    <WhyUs userDetail = {userDetail}/>
     <NewsLetter/>
-    <Plans/>
+    <Plans userDetail = {userDetail}/>
     <Footer/>
 
 

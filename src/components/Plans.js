@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import '../styles/Plans.css'
+import { userContext } from '../App'
+import { useNavigate } from 'react-router-dom'
 // import img1 from '../Images/img7.jpg'
-const Plans = () => {
-    // const [price,setPrice] = useState();
-    // const [plan,setPlan]  = useState();
+const Plans = ({userDetail}) => {
+    const myuser = useContext(userContext)
+    const formData = myuser.formData
+    const navigate = useNavigate()
     const [qty] = useState([
 
         {price:40,
@@ -17,6 +20,12 @@ const Plans = () => {
         },
     ]);
 
+
+    const navigateTo =()=>{
+        
+        navigate(!userDetail ? '/register' : !formData?'/formdata': `/user/${userDetail._id}`)
+    
+      }
     // console.log(qty);
   return (
           
@@ -26,7 +35,7 @@ const Plans = () => {
                 <h2 className=' price2'>CHOOSE YOUR <span>PRICING PLAN</span></h2>
                 <div className="priceContainer">
                 {qty.map(data=>
-                        <div className="silver">
+                        <div className="silver" onClick={navigateTo}>
 
                             <p className="basicplan">
                                 {data.plane}

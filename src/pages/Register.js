@@ -127,6 +127,8 @@ const Register = () => {
                 <li>Terms</li>
             </ul>
         </div> */}
+
+    
         <div onClick={()=>navigate('/')} className="bakArrrow bckarw" >
             <span class="material-symbols-outlined">
                 chevron_left
@@ -134,7 +136,9 @@ const Register = () => {
             <p >Back</p>
                                         
         </div>
-   
+        <h1 className="title3">
+            GET<span className='titlegreen'>Fit</span>
+          </h1>
     </div>
     <Footer/>
     </div>

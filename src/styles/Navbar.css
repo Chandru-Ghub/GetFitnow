@@ -4,7 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    
 }
 .logo{
     /* background-color: green; */
@@ -30,14 +33,34 @@
   .navs{
     display: flex;
     color: rgb(27, 225, 27);
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     justify-content: flex-end;
     /* background-color: red; */
     padding: 10px;
     >li{
         margin-left: 30px;
-        
+    }
+    >li:last-child{
+       margin-right: 30px;
+      
+
+    }
+    >li:hover{
+        color: white;
+      }
+
+  }
+  .showmenu{
+    display: flex;
+    color: rgb(27, 225, 27);
+    font-size: 16px;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    /* background-color: red; */
+    padding: 10px;
+    >li{
+        margin-left: 30px;
     }
     >li:last-child{
        margin-right: 30px;
@@ -87,4 +110,81 @@
         color: greenyellow;
     }
 }
- 
+
+.grn{
+    /* background-color: rgb(8, 8, 8); */
+    padding-left: 20px;
+    display: inline-flex;
+}
+
+ .bnm{
+    display: none;
+    cursor: pointer;
+ }
+
+ @media (max-width:880px) {
+    .bnm{
+        display: block;
+        margin-right: 10px;
+        font-size: 25px;
+     }  
+     .navs{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 40px;
+        width: 200px;
+        color: white;
+        padding-top: 30px;
+        position: fixed;
+        right: 0;
+        top: 63px;
+        height: 100vh;
+        z-index: 5;
+        right: -500px;
+        transition: 1s;
+     }
+     .showmenu{
+        background-color:teal;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 40px;
+        width: 200px;
+        color: white;
+        padding-top: 30px;
+        position: fixed;
+        right: 0;
+        top: 62px;
+        height: 100vh;
+        z-index: 5;
+        transition: 1s;
+     }
+ }
+ @media(max-width:490px){
+
+   .navbar{
+    >.logo{
+
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        >h2{
+            font-size: 30px;
+
+            margin-left: -25px;
+            >span{
+                font-size: 35px;
+            }
+        }
+    }
+   }
+
+   .timing{
+    margin-left: -35px;
+   }
+   .showmenu{
+    top: 76px;
+
+ }
+ }

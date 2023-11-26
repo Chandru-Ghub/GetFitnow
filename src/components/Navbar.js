@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import '../styles/Navbar.css'
 import {Link } from 'react-router-dom'
 import { userContext } from '../App'
@@ -13,6 +13,7 @@ const Navbar = ({userDetail}) => {
       const userStatus = window.localStorage.getItem('status') 
       // const CURRENT_USER = userDetail.data.isAdmin;
       console.log(userStatus);
+      const[open,setOpen] = useState(false)
    
   return (
     <div className='navbar'>
@@ -33,7 +34,7 @@ const Navbar = ({userDetail}) => {
            </div>
         </div>
         
-        <ul className="navs">
+        <ul className={open?'navs':'showmenu'}>
             <li>
                 <Link style={{color:'inherit'}}>
                   About
@@ -53,11 +54,6 @@ const Navbar = ({userDetail}) => {
            }
             { !userToken?
              <>
-            {/* <li>
-                <Link to={'register'}  style={{color:'inherit'}}>
-                SignUP
-                </Link>
-            </li> */}
             <li>
                 <Link to={'login'}  style={{color:'inherit'}}>
                 signin
@@ -81,8 +77,17 @@ const Navbar = ({userDetail}) => {
                   
                 </Link>
             </li> : null}
+            </ul>
+           <div className='bnm' onClick={()=>setOpen(!open)} >
+           {open?<span  style={{color:'white'}} className="material-symbols-outlined dumble bur">
+                menu
+                </span>:<span  style={{color:'white'}} className="material-symbols-outlined dumble bur">
+                close
+                </span>}
+           </div>
+
             
-        </ul>
+      
     </div>
   )
 }

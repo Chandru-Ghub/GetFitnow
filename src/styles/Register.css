@@ -2,7 +2,6 @@
     background-color: lightblue;
     /* height: 100vh; */
     display: flex;
-    align-items: center;
     justify-content: center;
     background:linear-gradient(rgba(0, 0, 0, 0.174),rgba(0, 0, 0, 0)) ,url('../Images/img3.jpg') ;
     background-size: cover;
@@ -211,3 +210,16 @@
 }
 
 /*  err */
+
+.title3{
+    position: absolute;
+    font-size: 120px;
+    color: rgb(255, 255, 255);
+    opacity: .2;
+    top: 72%;
+    right: 2%;
+    /* transform:translate(-50%,-50%); */
+    >.titlegreen{
+        color: rgb(27, 225, 27);
+    }
+}

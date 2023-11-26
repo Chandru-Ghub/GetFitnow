@@ -1,59 +1,77 @@
 .adminContainer{
-    background-color: lightblue;
+    /* background-color: lightblue; */
     display: flex;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .sec1{
     /* background-color: red; */
 }
 .sidebarAdmin{
-    background-color: green;
-    width: 240px;
+    background-color: rgb(19, 18, 18);
+    width: auto;
     height: 100vh;
+    /* transition: 1s; */
+}
+
+.sidebarAdmin:hover{
+    /* background-color: red; */
+}
+.sidenav{
+  /* background-color: green; */
+  padding:0px;
+    >li{
+        /* background-color: red; */
+        padding: 13px 10px;
+        margin-bottom: 15px;
+        display: flex;
+        column-gap: 25px;
+        height: 48px;
+
+        >span{
+            color: rgb(22, 249, 22);
+        }
+        >p{
+            color: rgb(255, 255, 255);
+            
+        }
+    }
+    >li:hover{
+        background-color: rgb(58, 58, 58);
+    }
+   
 }
 .sec2{
     /* background-color: red; */
-    width: 100%;
+    /* width: 100%; */
     >.topNav{
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(21, 19, 19);
         display: flex ; 
         justify-content: space-between;
         align-items: center;
         height: 50px;
-
+        width:100%;
+        margin-bottom: 30px;
         >.flogo{
             >h2{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                color: white;
                 >span{
                     /* font-size: 28px; */
+                    /* color: red; */
                 }
       
             }
         }
         
-        >.adminSearch{
-            /* background-color: red; */
-            display: flex;
-            padding: 5px;
-            border: 2px solid greenyellow;
-            border-radius: 20px;
-            >input{
-                background-color: transparent;
-                border: none;
-                outline: none;
-            }
-            >span{
-                color: greenyellow;
-            }
-        }
+       
 
 
         >.notify{
-            background-color: yellow;
+            /* background-color: yellow; */
             /* width: 100px; */
             display: flex;
             justify-content: space-between;
@@ -63,8 +81,33 @@
                 /* background-color: black; */
                 font-size: 35px;
                 margin: 0 10px;
+                color: greenyellow;
+
             }
         }
+    }
+}
+
+.adminSearch{
+    /* background-color: rgb(206, 58, 58); */
+    display: flex;
+    padding: 5px 10px;
+    border: 2px solid  rgb(10, 10, 10);
+    border-radius: 30px;
+    align-items: center;
+    margin-left: 30px;
+    justify-content: space-between;
+    width: 250px;
+    >input{
+
+        border: none;
+        outline: none;
+        height: 35px;
+        padding-left: 10px;
+    
+    }
+    >span{
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -85,5 +128,190 @@
         justify-content: center;
         align-items: center;
         border: 2px solid rgb(25, 255, 25);
+ 
+    }
+    >.subUser:hover{
+        background-color: red;
     }
 }
+.adminDetail{
+    >P{
+        /* background-color: blue; */
+        margin-bottom: 10px;
+    }
+}
+.adminlogo{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 10px 0;
+    >span{
+        color:white;
+        font-size: 30px;
+    }
+    >p{
+        color: greenyellow;
+
+    }
+}
+.pp{
+    /* display: none; */
+    /* transition: 1s; */
+    width: 140px;
+}
+
+.sidebarAdmin:hover .pp{
+    
+    display: block;
+}
+.cc{
+    /* background-color: red; */
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+}
+.adminhr{
+    border: 1px solid rgb(91, 89, 89);
+    margin: 20px 0;  
+    
+}
+
+.mainCon{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+/* tabel */
+
+.thead{
+    background-color: white;
+    height: 50px;
+    >th{
+        color: greenyellow;
+        /* background-color: rgb(69, 68, 68); */
+        background-color: rgb(87, 86, 86);
+    }
+}
+.tblist{
+    background-color: rgb(255, 255, 255);
+    height: 55px;
+    padding-left: 30px;
+    
+    >.tid{
+       padding-left: 20px;
+       /* width: 5%; */
+    }
+    >.tname{
+       padding-left: 20px;
+       /* width: 15%; */
+    }
+    >.temail{
+        padding-left: 20px;
+        /* width: 40%; */
+    }
+    >.tbtn{
+        /* padding-left: 20px; */
+        /* background: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        column-gap: 20px;
+        padding-top: 10px;
+    }
+}
+.ttle{
+    width: 100%;
+    background-color: rgb(228, 226, 226);
+}
+
+.searchUser{
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+.detail{
+    color: teal;
+    text-align: center;
+    /* background-color: red; */
+   
+}
+
+.title2{
+    position: absolute;
+    font-size: 80px;
+    color: rgb(0, 0, 0);
+    opacity: .4;
+    top: 82%;
+    right: 4%;
+    /* transform:translate(-50%,-50%); */
+    >.titlegreen{
+        color: rgb(27, 225, 27);
+    }
+}
+
+.userInfo , .editform{
+    padding-left: 30px;
+}
+.editform{
+    /* background-color: red; */
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    >.editUser{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        row-gap: 10px;
+        >input{
+            height: 40px;
+            width: 100%;
+            max-width: 400px;
+            padding-left: 10px;
+            border: 2px solid rgb(128, 128, 130);
+            border-radius: 5px;
+        }
+        >button{
+            width: 80px;
+            border-radius: 20px;
+            padding: 5px;
+            background-color: rgb(13, 247, 13);
+        }
+        >button:hover{
+            border-radius: 0;
+        }
+    }
+}
+.subCat{
+    color: rgb(99, 14, 203);
+    padding: 10px 0;
+}
+
+.perUser{
+    
+    >li{
+      
+        /* background-color: red; */
+        margin-bottom: 10px;
+        padding: 5px 0;
+        max-width: 500px;
+        display: flex;
+        >p{
+            /* background-color: blue; */
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            text-transform: uppercase;
+        }
+        >span{
+            color: grey;
+            /* background-color: green; */
+            padding-left: 20px;
+        }
+    }
+}
+

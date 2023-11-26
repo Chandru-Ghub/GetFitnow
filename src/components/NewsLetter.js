@@ -34,7 +34,7 @@ const NewsLetter = () => {
                         </p>
                         <div className="forms">
                             <form className='btnsub' onSubmit={subscribe} action="" >
-                                <input className='inpnews' onChange={(e)=>setSub(e.target.value)} type="text" placeholder='Enter enail'/>
+                                <input className='inpnews' onChange={(e)=>setSub(e.target.value)} type="text" placeholder='Enter email'/>
                                 <button type='submit' className='btnnews'>Subscribe</button>
                             </form>
                            { error? <p style={{color:'wheat'}}>Enter valid email</p>:null}

@@ -107,6 +107,9 @@ const Login = () => {
         <p>Back</p>
                                         
         </div>
+        <h1 className="title3">
+            GET<span className='titlegreen'>Fit</span>
+          </h1>
         </div>
     </div>
         <Footer/>

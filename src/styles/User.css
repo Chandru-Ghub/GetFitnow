@@ -1,0 +1,126 @@
+.userInformation{ 
+    background-color: rgba(255, 255, 255, 0);
+    >ul{
+        padding: 30px ;
+        padding-bottom: 0;
+        
+        >li{
+         
+            margin-bottom: 20px;
+            
+
+          
+        }
+        >.seplist{
+                background-color: green;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+            >.db{
+                background-color: red;
+                width: 250px;
+                margin-bottom: 20px;
+                
+            }
+        }
+     
+
+        >.imgdp{
+            /* background-color: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+           flex-wrap: wrap;
+
+            /* >.personalInfodp{
+
+                background-color: blue;
+                display: flex;
+                gap: 30px;
+          
+                >div{
+                    >.db{
+                        margin-bottom: 20px;
+                        border: 2px solid black;
+                        padding: 8px 5px;
+                        width: 250px;
+                       
+                    }
+                }
+            } */
+
+            >div{
+                >.pp{
+                    /* color: red; */
+                    /* background-color: black; */
+                    margin: auto;
+                    padding: 10px;
+                    
+                }
+                >.sendImage{
+                    width: 220px;
+                    height: 220px;
+                    border-radius: 50%;
+                    outline: 5px solid rgb(51, 11, 126);
+                
+                }
+                
+            }
+        }
+
+
+
+    }
+
+}
+.imgdp2{
+    /* background-color: violet; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+.userInfo{
+    /* background-color: red; */
+    
+}
+.lgout{
+    /* background-color: rgb(19, 23, 234); */
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    top: 2px;
+    right: 5%;    
+    color: rgb(10, 249, 10);
+    cursor: pointer;
+}
+.title5{
+    position: relative;
+    padding: 0px 10px;
+    background-color:rgb(59, 58, 58);
+    display: flex;
+    align-items: center;
+    >p{
+        color: white;
+    }
+    >span{
+        color: rgb(12, 255, 12);
+    }
+}
+.expiry{
+    background-color: rgb(61, 60, 60);
+    color: greenyellow;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.updatenow{
+  background-color: rgba(1, 255, 1, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    height: 50vh;
+}
