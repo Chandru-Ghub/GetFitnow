@@ -46,7 +46,6 @@ const Login = () => {
         authAxios.post('/auth/login',{name,password})
         .then(msg => {
             let data = msg.data
-            console.log(data)
             if(data == 'wrong credential!' || data == 'user name not found!' ) {
                 setOpen(false)
                 toast.warning(data)

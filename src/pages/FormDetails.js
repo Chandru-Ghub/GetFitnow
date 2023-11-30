@@ -64,8 +64,7 @@ const FormDetails = () => {
            formData.append('bmi',bmi)
            formData.append('program',program)
            formData.append('file',file)
-          
-        console.log(plan,program)
+        
         if(plan && program.length && gender){ 
             
             setErr2(false)  

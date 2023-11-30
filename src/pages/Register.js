@@ -78,7 +78,6 @@ const Register = () => {
 
     <div className='register'>
         <div className="registercon">
-            {/* <h3>SHOPYddddddddddd</h3> */}
             <div className="regtitle">
             SIGN UP
             </div>

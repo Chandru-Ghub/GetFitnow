@@ -15,7 +15,6 @@ import { useNavigate } from 'react-router-dom';
 const Home = ({userDetail}) => {
 
   const myuser = useContext(userContext)
-  const [demo,setDemo] = useState(true)
   const formData = myuser.formData   
   const navigate = useNavigate()
   const navigateTo =()=>{
@@ -30,23 +29,6 @@ const Home = ({userDetail}) => {
       <Navbar userDetail = {userDetail}/>
     <div className='home'>
         <div className="cover">
-          {demo && <div className='demo'>
-          <span onClick={()=>setDemo(!demo)} class="material-symbols-outlined">
-                close
-                </span>
-              <ul>
-                <li>
-                  <div>ADMIN</div>
-                  <p>UserName :  <span>admin</span></p>
-                  <p>Password  : <span>12345</span></p>
-                </li>
-                <li>
-                  <div>USER</div>
-                  <p>UserName :  <span>john</span></p>
-                  <p>Password  : <span>12345</span></p>
-                </li>
-              </ul>
-          </div>}
           <h1 className="title">
             GET<span className='titlegreen'>Fit</span>
           </h1>

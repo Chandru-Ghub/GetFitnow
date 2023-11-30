@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = 'http://localhost:3400'
+const URL = 'https://getfit-gktq.onrender.com'
 const accessToken = localStorage.getItem('token')
 export const authAxios = axios.create({
     baseURL: URL,

@@ -13,7 +13,7 @@ const OurSubscribers = () => {
   const [query,setQuery] = useState('') 
 
   const deleteUser = (id)=>{
-    console.log(id)
+
     const warning = window.confirm(' !⚠️ Subscriber has been removed from the DataBase')
     if(warning){
        authAxios.delete('/admin/deleteSubscriber/'+id)

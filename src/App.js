@@ -16,12 +16,14 @@ import FormDetails from './pages/FormDetails';
 import Serach from './pages/Serach';
 import Navbar from './components/Navbar';
 import mern from './Images/mern.jpeg'
+import { authAxios } from './axiosInterceptros/AxiosInterceptors';
 export const userContext = createContext()
 
 function App() {
 
   const [userType,setUserType] = useState({});
   const [formData,setFormData] = useState({});
+  const [demo,setDemo] = useState(true)
   const [sub,setSub] = useState({});
   const [user,setUser] = useState({});
   const [getUser,setgetUser] = useState('');
@@ -36,7 +38,7 @@ function App() {
 
   useEffect(()=>{
 
-    axios.post('http://localhost:3400/getUser',{token})
+    authAxios.post('/getUser',{token})
     .then(msg => {
         // console.log(msg.data)
          setUserDetail(msg.data)
@@ -46,13 +48,13 @@ function App() {
     })
     .catch(err => console.log(err))
     
-  },[])
+  },[token])
   
 
     // GET all subscribers
     useEffect(()=>{
 
-      axios.get('http://localhost:3400/admin/subscribers')
+      authAxios.get('/admin/subscribers')
   .then(msg => {
       // console.log(msg.data)
        setSub(msg.data)
@@ -67,7 +69,7 @@ function App() {
   // GET all users
   useEffect(()=>{
 
-      axios.get('http://localhost:3400/admin/users')
+      authAxios.get('/admin/users')
   .then(msg => {
       // console.log(msg.data)
        setUser(msg.data)
@@ -81,7 +83,7 @@ function App() {
    // JOINED customer
    useEffect(()=>{
 
-      axios.get('http://localhost:3400/userFormData/getcustomer/'+userDetail.email)
+      authAxios.get('/userFormData/getcustomer/'+userDetail.email)
   .then(msg => {
        setFormData(msg.data)
     
@@ -95,6 +97,24 @@ function App() {
 
   return (
     <div className="App">
+        {demo && <div className='demo'>
+          
+              <ul>
+              <span onClick={()=>setDemo(!demo)} className="material-symbols-outlined">
+                close
+                </span>
+                <li>
+                  <div>ADMIN</div>
+                  <p>UserName :  <span>admin</span></p>
+                  <p>Password  : <span>12345</span></p>
+                </li>
+                <li>
+                  <div>USER</div>
+                  <p>UserName :  <span>john</span></p>
+                  <p>Password  : <span>12345</span></p>
+                </li>
+              </ul>
+          </div>}
       <userContext.Provider value={{userType:userType,setUserType:setUserType,user:user,setUser:setUser,sub:sub,setSub:setSub,userDetail:userDetail,formData}}>
           <BrowserRouter>
               <Routes>

@@ -18,7 +18,6 @@ const UpdateUser = () => {
     const handleUpdate=(e)=>{
 
         e.preventDefault();
-        console.log('send')
             authAxios.put('/admin/updateUsers/'+id,{name,lastName,email})
             .then(res => 
                   {     

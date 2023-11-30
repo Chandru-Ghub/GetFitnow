@@ -13,7 +13,6 @@ const AdminUsers = () => {
   const [query,setQuery] = useState('')
 
   const deleteUser = (id)=>{
-    console.log(id)
     const warning = window.confirm(' !⚠️ Users has been removed from the DataBase')
     if(warning){
        authAxios.delete('/admin/deleteUser/'+id)

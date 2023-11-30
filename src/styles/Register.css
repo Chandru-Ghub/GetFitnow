@@ -16,7 +16,7 @@
     background-color: rgba(246, 250, 250, 0.164);
     padding: 20px;
     width: 40%;
-    min-width: 290px;
+    min-width: 500px;
     >h3{
        
         margin-bottom: 20px;
@@ -62,7 +62,7 @@
     display: flex;
     gap: 20px;
     margin: 20px 0;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     min-width: 240px;
     >.leftform{
       
@@ -263,4 +263,56 @@
     border-radius: 10px;
     left: 50%;
     background-color:rgba(70, 70, 70, 0.7);
+}
+@media (max-width:550px){
+
+    .registercon{
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(246, 250, 250, 0.164);
+        padding: 20px;
+        width: 40%;
+        min-width: 280px;
+        >h3{
+           
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 400;
+            display: none;
+        }
+        >.regtitle{
+          color: greenyellow;
+          font-weight: 400;
+          font-size: 30px;
+          text-shadow: 1px 1px rgb(64, 64, 64);
+        }
+    }
+    .register1{
+        display: flex;
+        gap: 20px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+        min-width: 240px;
+        >.leftform{
+          
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;  
+            row-gap: 20px;
+            margin-bottom: 10px;
+        }
+        >.rightform{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;  
+            row-gap: 20px;
+            margin-bottom: 10px;
+            /* background-color: red; */
+           
+        }
+    }
 }

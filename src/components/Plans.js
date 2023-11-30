@@ -35,8 +35,8 @@ const Plans = ({userDetail}) => {
                 <h2 className='ttle1'>OUR PLANS</h2>
                 <h2 className=' price2'>CHOOSE YOUR <span>PRICING PLAN</span></h2>
                 <div className="priceContainer">
-                {qty.map(data=>
-                        <div className="silver" onClick={navigateTo}>
+                {qty.map((data,i)=>
+                        <div key={i} className="silver" onClick={navigateTo}>
 
                             <p className="basicplan">
                                 {data.plane}

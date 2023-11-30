@@ -23,7 +23,6 @@ const User = () => {
 
       authAxios.get('/getUserById/'+id)
       .then(msg => {
-          console.log(msg.data)
           setUser(msg.data)
       })
       .catch(err => console.log(err))
