@@ -12,6 +12,7 @@ import Backdrop from '@mui/material/Backdrop';
 import {toast,ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css' 
 import CircularProgress from '@mui/material/CircularProgress';
+import { authAxios } from '../axiosInterceptros/AxiosInterceptors'
 
 const Login = () => {
     
@@ -42,7 +43,7 @@ const Login = () => {
             // resetForm({values :''})
             setOpen(true)
            const {name,password}= values;        
-        axios.post('http://localhost:3400/auth/login',{name,password})
+        authAxios.post('/auth/login',{name,password})
         .then(msg => {
             let data = msg.data
             console.log(data)

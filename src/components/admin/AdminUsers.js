@@ -4,6 +4,7 @@ import AdminNavbar from './AdminNavbar'
 import AdminSidebar from './AdminSidebar'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import { authAxios } from '../../axiosInterceptros/AxiosInterceptors'
 const AdminUsers = () => {
   const data = useContext(userContext)
   const sub = data.sub
@@ -15,7 +16,7 @@ const AdminUsers = () => {
     console.log(id)
     const warning = window.confirm(' !⚠️ Users has been removed from the DataBase')
     if(warning){
-       axios.delete('http://localhost:3400/admin/deleteUser/'+id)
+       authAxios.delete('/admin/deleteUser/'+id)
     .then(res => {
       // console.log(res,'RES')
       window.location.reload()

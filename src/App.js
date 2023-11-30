@@ -33,7 +33,6 @@ function App() {
   // console.log(wind);
   const token = window.localStorage.getItem('token')
   const isAdmin = window.localStorage.getItem('status')
-  console.log(isAdmin);
 
   useEffect(()=>{
 
@@ -84,7 +83,6 @@ function App() {
 
       axios.get('http://localhost:3400/userFormData/getcustomer/'+userDetail.email)
   .then(msg => {
-      console.log(msg.data,'/////')
        setFormData(msg.data)
     
   })

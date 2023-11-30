@@ -16,20 +16,6 @@ const AdminNavbar = ({user}) => {
                             </div>
                    
 
-                            <div className="notify">
-                                    <span class="material-symbols-outlined">
-                                    notifications
-                                    </span>
-
-                                    <span class="material-symbols-outlined">
-                                    mail
-                                    </span>
-
-                                    <span class="material-symbols-outlined">
-                                    account_circle
-                                    </span>
-                            </div>
-
                     </div>
              </div>
              

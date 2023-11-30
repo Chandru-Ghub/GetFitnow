@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup'
 import Footer from '../components/Footer';
 import '../styles/FormData.css'
+import { authAxios } from '../axiosInterceptros/AxiosInterceptors';
 
 const FormDetails = () => {
 
@@ -68,7 +69,7 @@ const FormDetails = () => {
         if(plan && program.length && gender){ 
             
             setErr2(false)  
-        axios.post('http://localhost:3400/userFormData',formData)
+        authAxios.post('/userFormData',formData)
         .then(msg => {
             // console.log(msg)
             msg.data == 'success' && setSuccess(true)

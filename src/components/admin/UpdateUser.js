@@ -3,6 +3,7 @@ import AdminSidebar from './AdminSidebar'
 import AdminNavbar from './AdminNavbar'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import { authAxios } from '../../axiosInterceptros/AxiosInterceptors'
 
 const UpdateUser = () => {
 
@@ -18,7 +19,7 @@ const UpdateUser = () => {
 
         e.preventDefault();
         console.log('send')
-            axios.put('http://localhost:3400/admin/updateUsers/'+id,{name,lastName,email})
+            authAxios.put('/admin/updateUsers/'+id,{name,lastName,email})
             .then(res => 
                   {     
                     alert('User detail has been updated')
@@ -35,7 +36,7 @@ const UpdateUser = () => {
 
     
             
-      axios.get('http://localhost:3400/getUserById/'+id)
+      authAxios.get('/getUserById/'+id)
       .then(msg => {
           setUser(msg.data)
           setname(msg.data.name)

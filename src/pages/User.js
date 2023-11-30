@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { userContext } from '../App';
 import '../styles/User.css'
 import Footer from '../components/Footer';
+import { authAxios } from '../axiosInterceptros/AxiosInterceptors';
 const User = () => {
     const userDetail = useContext(userContext)
     const formData = userDetail.formData
@@ -20,7 +21,7 @@ const User = () => {
 
     useEffect(()=>{
 
-      axios.get('http://localhost:3400/getUserById/'+id)
+      authAxios.get('/getUserById/'+id)
       .then(msg => {
           console.log(msg.data)
           setUser(msg.data)

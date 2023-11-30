@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import '../styles/Admin.css'
 import axios from 'axios'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
 import AdminUsers from '../components/admin/AdminUsers'
 import AdminSidebar from '../components/admin/AdminSidebar'
 import Navbar from '../components/Navbar'
@@ -12,7 +12,7 @@ import { userContext } from '../App'
 const Admin = () => {
 
   const data = useContext(userContext)
-  
+  const navigate = useNavigate()
   return (
     <div className='adminContainer'>
        
@@ -23,13 +23,13 @@ const Admin = () => {
 
                 <div className="sec3">
 
-                          <div className="subUser">
-                            <p>  subscribers</p>
-                              <p>{data.sub.length}</p>
+                          <div onClick={()=>navigate('/subscriberuser')} className="subUser">
+                            <p >  subscribers</p>
+                              <p  className='mnm'>&nbsp;#{data.sub.length}</p>
                           </div>
-                          <div className="subUser">
-                          <p>  Users</p>
-                              <p>{data.user.length}</p>
+                          <div onClick={()=>navigate('/userdetail')} className="subUser">
+                          <p >  Users  </p>
+                              <p className='mnm' >&nbsp;#{data.user.length}</p>
                           </div>
                           <div className="subUser">
                               administrator

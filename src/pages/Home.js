@@ -16,31 +16,7 @@ const Home = ({userDetail}) => {
 
   const myuser = useContext(userContext)
   const [demo,setDemo] = useState(true)
-  const formData = myuser.formData
-  // const [userDetail,setUserDetail] = useState('')
-  // console.log(wind);
-  // const token = window.localStorage.getItem('token')
-  // const isAdmin = window.localStorage.getItem('status')
-
-  
-  // useEffect(()=>{
-
-  //   axios.post('http://localhost:3400/getUser',{token})
-  //   .then(msg => {
-  //       // console.log(msg.data)
-  //        setUserDetail(msg.data)
-       
-
-  //       // if(msg.data =='data added') setShowmail(!showmail)
-  //   })
-  //   .catch(err => console.log(err))
-    
-
-
-  // },[])
-
-  
-   
+  const formData = myuser.formData   
   const navigate = useNavigate()
   const navigateTo =()=>{
     console.log('first')

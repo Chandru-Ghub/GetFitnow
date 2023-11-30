@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { userData } from './Detail'
 import '../styles/Search.css'
 import axios from 'axios';
+import { authAxios } from '../axiosInterceptros/AxiosInterceptors';
 const Serach = () => {
 
   const[query,setQuery] = useState('');
@@ -26,7 +27,7 @@ const Serach = () => {
   useEffect(()=>{
 
    const fetch = ()=>{
-    axios.get('http://localhost:3400/admin/users/?q='+ query.toLowerCase())
+    authAxios.get('/admin/users/?q='+ query.toLowerCase())
     .then(msg => {
         // console.log(msg)
          setUser(msg.data)

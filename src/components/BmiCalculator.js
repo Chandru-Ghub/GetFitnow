@@ -15,7 +15,7 @@ const BmiCalculator = () => {
                 setBmi(res)
         }
   return (
-    <div className='bmi'>
+    <div className='bmi' id='bmi'>
     <div className='bmiinner'>
     <div className="bmicalc">
 

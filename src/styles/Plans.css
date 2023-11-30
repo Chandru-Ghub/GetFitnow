@@ -101,6 +101,7 @@ margin-bottom: 30px;
     display: flex;
     /* background-color: red;
     padding: 60px; */
+    justify-content: center;
     column-gap: 50px;
     flex-wrap: wrap;
     margin-bottom: 50px;

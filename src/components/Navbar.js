@@ -1,18 +1,14 @@
 import React, { useContext, useState } from 'react'
 import '../styles/Navbar.css'
-import {Link } from 'react-router-dom'
+import{HashLink as Link} from 'react-router-hash-link'
 import { userContext } from '../App'
-
     
 
 const Navbar = ({userDetail}) => {
 
       // Getting user details from the  
-    //   const userName = useContext(userContext)
       const userToken = window.localStorage.getItem('token') 
       const userStatus = window.localStorage.getItem('status') 
-      // const CURRENT_USER = userDetail.data.isAdmin;
-      console.log(userStatus);
       const[open,setOpen] = useState(true)
    
   return (
@@ -35,13 +31,19 @@ const Navbar = ({userDetail}) => {
         </div>
         
         <ul className={open?'navs':'showmenu'}>
-            <li>
-                <Link style={{color:'inherit'}}>
-                  About
+        <li>
+                <Link to='/#bmi' smooth style={{color:'inherit'}}>
+                  BMI
                 </Link>
             </li>
             <li>
-                <Link style={{color:'inherit'}}>
+                <Link to='/#program' smooth style={{color:'inherit'}}>
+                  Program
+                </Link>
+            </li>
+        
+            <li>
+                <Link to='/#plans' smooth style={{color:'inherit'}}>
                 plans
                 </Link>
             </li>

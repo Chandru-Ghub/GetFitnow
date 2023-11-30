@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/Program.css'
 const Program = () => {
   return (
-    <div className='Program'>
+    <div className='Program' id='program'>
             {/* <div className="seperator">
                     
             </div> */}

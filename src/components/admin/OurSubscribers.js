@@ -4,6 +4,7 @@ import AdminNavbar from './AdminNavbar'
 import AdminUsers from './AdminUsers'
 import { userContext } from '../../App'
 import axios from 'axios'
+import { authAxios } from '../../axiosInterceptros/AxiosInterceptors'
 
 const OurSubscribers = () => {
   const data = useContext(userContext)
@@ -15,7 +16,7 @@ const OurSubscribers = () => {
     console.log(id)
     const warning = window.confirm(' !⚠️ Subscriber has been removed from the DataBase')
     if(warning){
-       axios.delete('http://localhost:3400/admin/deleteSubscriber/'+id)
+       authAxios.delete('/admin/deleteSubscriber/'+id)
     .then(res => {
       // console.log(res,'RES')
       window.location.reload()

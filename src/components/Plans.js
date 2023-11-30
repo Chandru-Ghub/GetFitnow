@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import '../styles/Plans.css'
 import { userContext } from '../App'
 import { useNavigate } from 'react-router-dom'
+
 // import img1 from '../Images/img7.jpg'
 const Plans = ({userDetail}) => {
     const myuser = useContext(userContext)
@@ -29,7 +30,7 @@ const Plans = ({userDetail}) => {
     // console.log(qty);
   return (
           
-            <div className='plans'>
+            <div className='plans' id='plans'>
 
                 <h2 className='ttle1'>OUR PLANS</h2>
                 <h2 className=' price2'>CHOOSE YOUR <span>PRICING PLAN</span></h2>

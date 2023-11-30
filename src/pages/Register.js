@@ -10,6 +10,7 @@ import Backdrop from '@mui/material/Backdrop';
 import {toast,ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css' 
 import CircularProgress from '@mui/material/CircularProgress';
+import { authAxios } from '../axiosInterceptros/AxiosInterceptors'
 const Register = () => {
 
     const navigate  = useNavigate()
@@ -45,7 +46,7 @@ const Register = () => {
            const {name,lastName,email,password}= values;
            setOpen(true)
         
-        axios.post('http://localhost:3400/auth/register',{name,lastName,email,password})
+        authAxios.post('/auth/register',{name,lastName,email,password})
         .then(msg => {
 
                 if(msg.data == 'Registerd Sucessfully'){
