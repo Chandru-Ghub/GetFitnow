@@ -84,3 +84,46 @@
         }
 }
 
+
+.demo{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    >span{
+        position: absolute;
+        top: 10px;
+        font-size: 19px;
+        color:blue;
+        right: 10px;
+        cursor: pointer;
+    }
+    >ul{
+        background: rgb(199, 199, 199);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 15px;
+        border-radius: 3px;
+        >li{
+            display: flex;
+            /* width: 200px; */
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            >div{
+                color: teal;
+            }
+            >p{
+                margin-top: 10px;
+                color: green;
+                >span{
+                    color:rgb(0, 0, 0);
+                }
+            }
+        }
+    }
+}

@@ -16,7 +16,7 @@
     background-color: rgba(246, 250, 250, 0.164);
     padding: 20px;
     width: 40%;
-    
+    min-width: 290px;
     >h3{
        
         margin-bottom: 20px;
@@ -35,6 +35,35 @@
     display: flex;
     gap: 20px;
     margin: 20px 0;
+    flex-wrap: wrap;
+    >.leftform{
+      
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        row-gap: 20px;
+        margin-bottom: 10px;
+    }
+    >.rightform{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        row-gap: 20px;
+        margin-bottom: 10px;
+        /* background-color: red; */
+       
+    }
+}
+.register1{
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    min-width: 240px;
     >.leftform{
       
         width: 100%;
@@ -222,4 +251,16 @@
     >.titlegreen{
         color: rgb(27, 225, 27);
     }
+}
+
+.regscs{
+    position: fixed;
+    top:50%;
+    font-size: 15px;
+    font-weight: 200x;
+    color: rgb(0, 255, 0);
+    padding: 8px;
+    border-radius: 10px;
+    left: 50%;
+    background-color:rgba(70, 70, 70, 0.7);
 }

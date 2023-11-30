@@ -15,7 +15,7 @@ import UpdateUser from './components/admin/UpdateUser';
 import FormDetails from './pages/FormDetails';
 import Serach from './pages/Serach';
 import Navbar from './components/Navbar';
-
+import mern from './Images/mern.jpeg'
 export const userContext = createContext()
 
 function App() {

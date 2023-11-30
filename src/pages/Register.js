@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/Register.css'
 import bgimg from '../Images/img3.jpg'
 import axios from 'axios'
@@ -6,11 +6,15 @@ import {useFormik} from 'formik'
 import * as Yup from 'yup'
 import   { Link, NavLink, Router, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
-
+import Backdrop from '@mui/material/Backdrop';
+import {toast,ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css' 
+import CircularProgress from '@mui/material/CircularProgress';
 const Register = () => {
 
     const navigate  = useNavigate()
-
+    const [open,setOpen] = useState(false);
+    const [success,setSuccess] = useState('');
 
      // formik
      const formik = useFormik({
@@ -39,18 +43,38 @@ const Register = () => {
         onSubmit:(values)=>{
             // resetForm({values :''})
            const {name,lastName,email,password}= values;
-           console.log(name,lastName,email,password);
+           setOpen(true)
         
         axios.post('http://localhost:3400/auth/register',{name,lastName,email,password})
         .then(msg => {
-            console.log(msg.data)
-            // if(msg.data =='data added') setShowmail(!showmail)
+
+                if(msg.data == 'Registerd Sucessfully'){
+                    
+                    toast.success(msg.data)
+                    setOpen(false)
+                    setTimeout(()=>{
+                        navigate('/login')
+                    },2000)
+                }else{
+                    toast.error(msg.data)
+                }
+           
         })
         .catch(err => console.log(err))
         }
     })
   return (
     <div>
+           <ToastContainer
+            position='top-right'
+            />
+              <Backdrop
+    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    open={open}
+  >
+    <CircularProgress color="inherit" />
+  </Backdrop>  
+
     <div className='register'>
         <div className="registercon">
             {/* <h3>SHOPYddddddddddd</h3> */}
@@ -58,7 +82,7 @@ const Register = () => {
             SIGN UP
             </div>
             <form onSubmit={formik.handleSubmit}>
-                <div action="" className="registerdata" >
+                <div action="" className="register1" >
                     <div className="leftform rfm">
 
                         <input  value={formik.values.name}   className='inp' name='name' type="text" onChange={formik.handleChange}

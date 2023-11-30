@@ -142,7 +142,7 @@
         height: 100vh;
         z-index: 5;
         right: -500px;
-        transition: 1s;
+        transition: .5s;
      }
      .showmenu{
         background-color:teal;
@@ -158,7 +158,7 @@
         top: 62px;
         height: 100vh;
         z-index: 5;
-        transition: 1s;
+        transition: .5s;
      }
  }
  @media(max-width:490px){

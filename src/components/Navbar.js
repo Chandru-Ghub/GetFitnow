@@ -13,7 +13,7 @@ const Navbar = ({userDetail}) => {
       const userStatus = window.localStorage.getItem('status') 
       // const CURRENT_USER = userDetail.data.isAdmin;
       console.log(userStatus);
-      const[open,setOpen] = useState(false)
+      const[open,setOpen] = useState(true)
    
   return (
     <div className='navbar'>

@@ -1,5 +1,5 @@
 
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 // import {Link, NavLink} from 'react-router-dom'
 import '../styles/Register.css'
 import {useFormik} from 'formik'
@@ -8,14 +8,17 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { userContext } from '../App'
 import Footer from '../components/Footer'
+import Backdrop from '@mui/material/Backdrop';
+import {toast,ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css' 
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Login = () => {
     
     // Getting user details from the  
     const userType = useContext(userContext)
     const navigate  = useNavigate()
-   
-
+    const [open,setOpen] = useState(false);
       // formik
       const formik = useFormik({
 
@@ -37,17 +40,34 @@ const Login = () => {
         }),
         onSubmit:(values)=>{
             // resetForm({values :''})
-           const {name,password}= values;
-           console.log(name,password);
-        
+            setOpen(true)
+           const {name,password}= values;        
         axios.post('http://localhost:3400/auth/login',{name,password})
         .then(msg => {
-            const isAdmin = msg.data.data.isAdmin;
-            userType.setUserType(msg.token)
-            window.localStorage.setItem('token',msg.data.token)
-            window.localStorage.setItem('status',isAdmin)
-            navigate('/')
-            window.location.reload()
+            let data = msg.data
+            console.log(data)
+            if(data == 'wrong credential!' || data == 'user name not found!' ) {
+                setOpen(false)
+                toast.warning(data)
+            }
+            else{
+                setOpen(false)
+                toast.success('Login Successfull!')
+                setTimeout(()=>{
+                       const isAdmin = data.data.isAdmin;
+                        userType.setUserType(msg.token)
+                        window.localStorage.setItem('token',msg.data.token)
+                        window.localStorage.setItem('status',isAdmin)
+                        navigate('/')
+                        window.location.reload()
+                    navigate('/')
+                },1000)
+        }
+            
+   
+                //  toast.warning(msg.data) 
+            
+           
 
             // if(msg.data =='data added') setShowmail(!showmail)
         })
@@ -57,6 +77,15 @@ const Login = () => {
 
   return (
     <div className='login'>
+            <ToastContainer
+            position='top-right'
+            />
+              <Backdrop
+    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    open={open}
+  >
+    <CircularProgress color="inherit" />
+  </Backdrop> 
         <div className='register'>
         <div className="registercon loginpg">
             <h3>SHOPY</h3>
@@ -90,7 +119,7 @@ const Login = () => {
      
 
             <div className="forgotpass">
-                <p>Forgot Password?</p>
+                <p >Forgot Password?</p>
                 <p onClick={()=>navigate('/register')}>Create New Account</p>
             </div>
             <div className="createaccountbtn">
