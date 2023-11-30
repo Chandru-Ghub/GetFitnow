@@ -20,9 +20,9 @@ const User = () => {
     }
 
     useEffect(()=>{
-
       authAxios.get('/getUserById/'+id)
       .then(msg => {
+          // console.log(msg.data)
           setUser(msg.data)
       })
       .catch(err => console.log(err))
@@ -66,7 +66,7 @@ const User = () => {
               <ul>
                   <li className='imgdp'>
                       <div>
-                          <img className='sendImage' src={'http://localhost:3400/images/'+formData.image} alt="images"  />
+                          <img className='sendImage' src={'https://getfit-gktq.onrender.com/images/'+formData.image} alt="images"  />
                             <p className='pp'>{formData.name} {formData.lastName}</p>
                       </div>
                     

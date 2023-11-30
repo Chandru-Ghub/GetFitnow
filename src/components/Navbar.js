@@ -2,17 +2,33 @@ import React, { useContext, useState } from 'react'
 import '../styles/Navbar.css'
 import{HashLink as Link} from 'react-router-hash-link'
 import { userContext } from '../App'
-    
+import {motion,useScroll} from 'framer-motion' 
 
 const Navbar = ({userDetail}) => {
 
-      // Getting user details from the  
+      // Getting user details from the 
+      const {scrollYProgress} = useScroll()
+      const userData = useContext(userContext)
+      const formData = userData.formData 
       const userToken = window.localStorage.getItem('token') 
       const userStatus = window.localStorage.getItem('status') 
       const[open,setOpen] = useState(true)
    
   return (
     <div className='navbar'>
+       <motion.div
+                    style={{
+                        scaleX:scrollYProgress,
+                        position:'fixed',
+                        top:62,
+                        right:0,
+                        left:0,
+                        height:2,
+                        background:'teal',
+                        transformOrigin:'0%'
+
+                    }}
+                ></motion.div>
         <div className="logo">
             <h2>
                 GETFit
@@ -71,9 +87,10 @@ const Navbar = ({userDetail}) => {
                
                               
                 <p className='nameUser'>
-                <span className="material-symbols-outlined profile">
-                  account_circle
-                  </span>
+                {formData? <img className='navimg' src={'https://getfit-gktq.onrender.com/images/'+formData.image} alt="images"  />
+                : <span className="material-symbols-outlined profile">
+                account_circle
+                </span> }
                 <span>{userDetail.name}</span>
                 </p>
                   
