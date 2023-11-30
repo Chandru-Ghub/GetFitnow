@@ -47,14 +47,15 @@ const Navbar = ({userDetail}) => {
         </div>
         
         <ul className={open?'navs':'showmenu'}>
-        <li>
-                <Link to='/#bmi' smooth style={{color:'inherit'}}>
-                  BMI
-                </Link>
-            </li>
+       
             <li>
                 <Link to='/#program' smooth style={{color:'inherit'}}>
                   Program
+                </Link>
+            </li>
+            <li>
+                <Link to='/#bmi' smooth style={{color:'inherit'}}>
+                  BMI
                 </Link>
             </li>
         
