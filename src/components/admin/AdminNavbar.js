@@ -5,7 +5,9 @@ const AdminNavbar = ({user}) => {
     <div>
             <div className="sec2">
                     <div className="topNav">
-                      
+                       {/* <span  class="material-symbols-outlined burgeradmin">
+                              menu
+                              </span> */}
                             <div className="flogo">
                                         <h2>
                                             GETFit

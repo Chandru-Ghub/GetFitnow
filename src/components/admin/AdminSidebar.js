@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { userContext } from '../../App'
 
@@ -8,22 +8,25 @@ const AdminSidebar = () => {
     // console.log(user,'>>>')
     const detail = useContext(userContext);
     const user = detail.userDetail
+    const [show,setShow] = useState(true)
   return (
     <div>
           <div className="sec1">
-              <div className="sidebarAdmin">
+              <div className={show?"sidebarAdmin":'sidebarAdminOn'}>
               <div className='adminDetail'>
                             <div className="adminlogo">
                             <span class="material-symbols-outlined">
                             account_circle
                             </span>
                             <p className='pp'>  Welcome Admin!</p>
-                            {/* <span  class="material-symbols-outlined">
+                            <span onClick={()=>setShow(!show)}  class="material-symbols-outlined burgeradmin">
                               menu
-                              </span> */}
+                              </span>
                       
                             </div>
-                              <p className='pp cc'> {user.name}</p>
+                              <p className='pp cc'> {user.name} <span onClick={()=>setShow(!show)}  class="material-symbols-outlined">
+                              close
+                              </span></p>
                               <p className='pp cc'> {user.email}</p>
                           </div>
                           <hr className='adminhr' />

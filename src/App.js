@@ -17,6 +17,7 @@ import Serach from './pages/Serach';
 import Navbar from './components/Navbar';
 import mern from './Images/mern.jpeg'
 import { authAxios } from './axiosInterceptros/AxiosInterceptors';
+import { AdminRoutes, UserRoutes } from './components/ProtectedRoutes';
 export const userContext = createContext()
 
 function App() {
@@ -120,14 +121,18 @@ function App() {
               <Routes>
                     <Route path='/' element={  <Home userDetail = {userDetail}/>} />
                     <Route path='/register' element={  <Register/>} />
-                    <Route path='/login' element={  <Login/>} />
-                    <Route path='/admin' element={  isAdmin=='true'?<Admin userDetail = {userDetail}/> :<NoPage/>} />
-                    <Route path='/user/:id' element={  <User/>} />
-                    <Route path='/userdetail' element={<AdminUsers/>}/>
-                    <Route path='/subscriberuser' element={<OurSubscribers/>}/>
-                    <Route path='/updateuser/:id' element={<UpdateUser/>}/>
-                    <Route path='/formdata' element={<FormDetails/>}/>
-                    <Route path='/search' element={<Serach/>}/>
+                    <Route path='/login' element={<Login/>} />
+                          <Route element={<AdminRoutes/>}>
+                                  <Route path='/admin' element={<Admin userDetail = {userDetail}/>} />
+                                  <Route path='/userdetail' element={<AdminUsers/>}/>
+                                  <Route path='/subscriberuser' element={<OurSubscribers/>}/>
+                                  <Route path='/updateuser/:id' element={<UpdateUser/>}/>
+                                  <Route path='/search' element={<Serach/>}/>
+                          </Route>
+                          <Route element={<UserRoutes/>}>
+                                  <Route path='/formdata' element={<FormDetails/>}/>
+                                  <Route path='/user/:id' element={  <User/>} />
+                          </Route>
               </Routes>
           </BrowserRouter>
       </userContext.Provider>
