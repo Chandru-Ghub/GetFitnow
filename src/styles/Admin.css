@@ -17,6 +17,7 @@
 
 .sidebarAdmin:hover{
     /* background-color: red; */
+    
 }
 .sidenav{
   padding:0px;
@@ -188,6 +189,7 @@
     >span{
         margin-left: 100px;
         color: red;
+        cursor: pointer;
     }
 }
 .adminhr{
@@ -336,7 +338,17 @@
 .burgeradmin{
     display: none;
 }
-
+.sidebarAdminOn{
+    background-color:rgb(12, 12, 64);
+    width: auto;
+    height: 100vh;
+    /* transition: 1s; */
+    position: absolute;
+    /* left: -250px; */
+}
+.xclose{
+    display: none;
+}
 @media(max-width:700px){
     .sidebarAdmin{
         background-color:rgb(12, 12, 64);
@@ -345,6 +357,9 @@
         /* transition: 1s; */
         position: absolute;
         left: -250px;
+    }
+    .xclose{
+        display: block;
     }
     .burgeradmin{
         display: block;

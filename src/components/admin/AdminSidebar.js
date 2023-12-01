@@ -24,7 +24,7 @@ const AdminSidebar = () => {
                               </span>
                       
                             </div>
-                              <p className='pp cc'> {user.name} <span onClick={()=>setShow(!show)}  class="material-symbols-outlined">
+                              <p className='pp cc'> {user.name} <span onClick={()=>setShow(!show)}  class="material-symbols-outlined xclose">
                               close
                               </span></p>
                               <p className='pp cc'> {user.email}</p>
