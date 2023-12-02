@@ -9,7 +9,6 @@ const auth =()=>{
     return false
 }
 
-
 // check wheather user logged in or not 
 const user = ()=>{
     const token = window.localStorage.getItem('token')

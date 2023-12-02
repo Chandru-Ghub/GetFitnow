@@ -19,6 +19,7 @@ const Login = () => {
     // Getting user details from the  
     const userType = useContext(userContext)
     const navigate  = useNavigate()
+    const [demo,setDemo] = useState(true)
     const [open,setOpen] = useState(false);
       // formik
       const formik = useFormik({
@@ -77,6 +78,24 @@ const Login = () => {
 
   return (
     <div className='login'>
+         {demo && <div className='demo'>
+          
+          <ul>
+          <span onClick={()=>setDemo(!demo)} className="material-symbols-outlined">
+            close
+            </span>
+            <li>
+              <div>ADMIN</div>
+              <p>UserName :  <span>admin</span></p>
+              <p>Password  : <span>12345</span></p>
+            </li>
+            <li>
+              <div>USER</div>
+              <p>UserName :  <span>john</span></p>
+              <p>Password  : <span>12345</span></p>
+            </li>
+          </ul>
+      </div>}
             <ToastContainer
             position='top-right'
             />

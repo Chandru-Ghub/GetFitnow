@@ -10,13 +10,13 @@ const Plans = ({userDetail}) => {
     const navigate = useNavigate()
     const [qty] = useState([
 
-        {price:40,
+        {price:2000,
             plane : 'Basic plan'
         },
-        {price:59,
+        {price:8000,
             plane : '6 month unlimited'
         },
-        {price:99,
+        {price:15000,
             plane : '12 month umlimited'
         },
     ]);
@@ -43,7 +43,7 @@ const Plans = ({userDetail}) => {
                             </p>
 
                             <div className="price">
-                                <p className="rupee">${data.price}</p>
+                                <p className="rupee">₹{data.price}</p>
                                 <p className="class">SINGLE CLASS</p>
                             </div>
                             <ul className='listPlan'>

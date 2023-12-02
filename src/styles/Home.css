@@ -96,8 +96,8 @@
     left: 0;
     right: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     background-color: rgba(170, 170, 170, 0.596);
     padding: 10px;
    
